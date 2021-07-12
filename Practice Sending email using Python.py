@@ -15,7 +15,7 @@ import getpass #importing getpass to enable non-visible text while entering pass
 
 # asking user to enter email id and password
 
-email_id = getpass.getpass('Enter your email id: ')
+email_id = input('Enter your email id: ')
 password = getpass.getpass('Enter your password: ') # this password is actually 'app' password and not normal gmail account password
 
 
@@ -24,10 +24,10 @@ mail_server_connection.login(email_id,password) # making a login attempt to the 
 
 #compose the email like we normally do in webpage or app
 
-from_address="abc@gmail.com"
+from_address=email_id
 to_address=input("Enter recepient email id")
-subject=input("Enter the subject")
-message=input("Enter the body message")
+subject=input("Enter the subject: ")
+message=input("Enter the body message: ")
 msg="Subject: "+ subject + '\n' + message
 
 
